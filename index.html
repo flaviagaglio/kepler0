@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Keplerian Module // N-Body</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="boot-modal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-header">MOD.01 // GRAVITY SYNTHESIZER</div>
+            <div class="modal-body">
+                <p><strong>COS'È:</strong> Una simulazione astrofisica che calcola le forze gravitazionali tra corpi celesti in tempo reale (N-Body problem).</p>
+                <p><strong>COSA VEDI:</strong> La massa arancione al centro è una stella. I corpi minori sono pianeti attratti dalla sua gravità. Le linee nere tracciano la loro storia orbitale.</p>
+                <div class="instructions">
+                    [ INTERAZIONE RICHIETA ]<br><br>
+                    > TOCCA LO SCHERMO per iniettare un nuovo corpo celeste con massa e velocità casuali.<br><br>
+                    > OSSERVA come la sua gravità perturba il sistema. Pianeti troppo vicini verranno espulsi o collasseranno al centro.
+                </div>
+            </div>
+            <button id="btn-start" class="te-btn">AVVIA SIMULAZIONE</button>
+        </div>
+    </div>
+
+    <div class="hud" id="hud-panel">
+        <div class="hud-title">N-BODY ENGINE</div>
+        <div class="hud-grid">
+            <div class="hud-cell">
+                <span class="label">PARAM.G</span>
+                <span class="val" id="val-g">1.20</span>
+            </div>
+            <div class="hud-cell">
+                <span class="label">T.STEP</span>
+                <span class="val" id="val-dt">0.04</span>
+            </div>
+            <div class="hud-cell">
+                <span class="label">BODIES</span>
+                <span class="val" id="val-bodies">--</span>
+            </div>
+        </div>
+        <div class="hud-footer">
+            SYS.ARCHITECT: <a href="https://flaviagaglio.github.io/" target="_blank" rel="noopener noreferrer">FLAVIA GAGLIO</a>
+        </div>
+    </div>
+
+    <canvas id="simCanvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
